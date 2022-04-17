@@ -118,7 +118,7 @@
     <slot />
   </div>
 {:catch error}
-  <p>Something went wrong: {error.message}</p>
+  <p>发生错误: {error.message}</p>
 {/await}
 
 <style>

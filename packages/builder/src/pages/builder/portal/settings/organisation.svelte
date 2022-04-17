@@ -77,17 +77,17 @@
       <Body>
         Organisation settings is where you can edit your organisation name and
         logo. You can also configure your platform URL and enable or disable
-        analytics.
+        analytics.在组织设置里，你可以修改组织名称和logo.你可以配置平台URL并且启用/暂停分析。
       </Body>
     </Layout>
     <Divider size="S" />
     <Layout gap="XS" noPadding>
-      <Heading size="S">Information</Heading>
-      <Body size="S">Here you can update your logo and organization name.</Body>
+      <Heading size="S">信息</Heading>
+      <Body size="S">在这里修改组织名称和Logo.</Body>
     </Layout>
     <div class="fields">
       <div class="field">
-        <Label size="L">Org. name</Label>
+        <Label size="L">组织名称</Label>
         <Input thin bind:value={$values.company} />
       </div>
       <div class="field logo">
@@ -109,22 +109,22 @@
     {#if !$admin.cloud}
       <Divider size="S" />
       <Layout gap="XS" noPadding>
-        <Heading size="S">Platform</Heading>
-        <Body size="S">Here you can set up general platform settings.</Body>
+        <Heading size="S">平台</Heading>
+        <Body size="S">在这里设置平台信息.</Body>
       </Layout>
       <div class="fields">
         <div class="field">
           <Label
             size="L"
             tooltip={"Update the Platform URL to match your Budibase web URL. This keeps email templates and authentication configs up to date."}
-            >Platform URL</Label
+            >平台URL</Label
           >
           <Input thin bind:value={$values.platformUrl} />
         </div>
       </div>
     {/if}
     <div>
-      <Button disabled={loading} on:click={saveConfig} cta>Save</Button>
+      <Button disabled={loading} on:click={saveConfig} cta>保存</Button>
     </div>
   </Layout>
 {/if}

@@ -24,11 +24,11 @@
 
   const templateSchema = {
     name: {
-      displayName: "Name",
+      displayName: "名称",
       editable: false,
     },
     category: {
-      displayName: "Category",
+      displayName: "分类",
       editable: false,
     },
   }
@@ -106,19 +106,14 @@
   <Layout noPadding gap="XS">
     <Heading size="M">Email</Heading>
     <Body>
-      Sending email is not required, but highly recommended for processes such
-      as password recovery. To setup automated auth emails, simply add the
-      values below and click activate.
+      发送邮件不是必须的，但是在找回密码过程等功能中强烈推荐使用。如果要设置自动的认证邮件，只需要添加下面的设置并点击激活按钮
     </Body>
   </Layout>
   <Divider />
   {#if smtpConfig}
     <Layout gap="XS" noPadding>
       <Heading size="S">SMTP</Heading>
-      <Body size="S">
-        To allow your app to benefit from automated auth emails, add your SMTP
-        details below.
-      </Body>
+      <Body size="S">添加SMTP信息</Body>
     </Layout>
     <Layout gap="XS" noPadding>
       <div class="form-row">
@@ -126,7 +121,7 @@
         <Input bind:value={smtpConfig.config.host} />
       </div>
       <div class="form-row">
-        <Label size="L">Security type</Label>
+        <Label size="L">安全类型</Label>
         <Select
           bind:value={smtpConfig.config.secure}
           options={[
@@ -136,34 +131,33 @@
         />
       </div>
       <div class="form-row">
-        <Label size="L">Port</Label>
+        <Label size="L">端口</Label>
         <Input type="number" bind:value={smtpConfig.config.port} />
       </div>
       <div class="form-row">
-        <Label size="L">From email address</Label>
+        <Label size="L">发送地址</Label>
         <Input type="email" bind:value={smtpConfig.config.from} />
       </div>
       <Checkbox bind:value={requireAuth} text="Require sign-in" />
       {#if requireAuth}
         <div class="form-row">
-          <Label size="L">User</Label>
+          <Label size="L">用户名</Label>
           <Input bind:value={smtpConfig.config.auth.user} />
         </div>
         <div class="form-row">
-          <Label size="L">Password</Label>
+          <Label size="L">密码</Label>
           <Input type="password" bind:value={smtpConfig.config.auth.pass} />
         </div>
       {/if}
     </Layout>
     <div>
-      <Button cta on:click={saveSmtp}>Save</Button>
+      <Button cta on:click={saveSmtp}>保存</Button>
     </div>
     <Divider />
     <Layout gap="XS" noPadding>
-      <Heading size="S">Templates</Heading>
+      <Heading size="S">模板</Heading>
       <Body size="S">
-        Budibase comes out of the box with ready-made email templates to help
-        with user onboarding. Please refrain from changing the links.
+        BBCN已经设置好了邮件模板，用户开箱即用。请不要修改默认链接。
       </Body>
     </Layout>
     <Table

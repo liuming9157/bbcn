@@ -54,15 +54,15 @@
     <Layout>
       <Layout noPadding justifyItems="center">
         <img alt="logo" src={Logo} />
-        <Heading>Set Budibase organisation</Heading>
+        <Heading>设置BBCN组织</Heading>
       </Layout>
       <Divider noGrid />
       <Layout gap="XS" noPadding>
-        <Body size="S" textAlign="center">Set organisation</Body>
+        <Body size="S" textAlign="center">设置组织</Body>
         <Input label="Organisation" bind:value={tenantId} />
       </Layout>
       <Layout gap="XS" noPadding>
-        <Button cta on:click={setOrg}>Set organisation</Button>
+        <Button cta on:click={setOrg}>设置组织</Button>
       </Layout>
     </Layout>
   </div>

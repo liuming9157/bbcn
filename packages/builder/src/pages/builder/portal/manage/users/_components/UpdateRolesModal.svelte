@@ -39,7 +39,7 @@
           },
         })
       }
-      notifications.success("Role updated")
+      notifications.success("角色更新成功")
       dispatch("update")
     } catch (error) {
       notifications.error("Failed to update role")
@@ -49,14 +49,14 @@
 
 <ModalContent
   onConfirm={updateUserRoles}
-  title="Update App Role"
-  confirmText="Update role"
-  cancelText="Cancel"
+  title="更新应用角色"
+  confirmText="更新角色"
+  cancelText="取消"
   size="M"
   showCloseIcon={false}
 >
   <Body>
-    Update {user.email}'s role for <strong>{app.name}</strong>.
+    为 <strong>{app.name}</strong>更新 {user.email}的角色.
   </Body>
   <Select
     placeholder={null}

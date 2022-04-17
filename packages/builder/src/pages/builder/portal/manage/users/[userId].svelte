@@ -127,29 +127,26 @@
         size="S"
         icon="BackAndroid"
       >
-        Back to users
+        返回用户管理
       </ActionButton>
     </div>
-    <Heading>User: {$userFetch?.data?.email}</Heading>
-    <Body>
-      Change user settings and update their app roles. Also contains the ability
-      to delete the user as well as force reset their password.
-    </Body>
+    <Heading>用户: {$userFetch?.data?.email}</Heading>
+    <Body>修改用户信息和角色，删除用户，强制重置密码</Body>
   </Layout>
   <Divider size="S" />
   <Layout gap="S" noPadding>
-    <Heading size="S">General</Heading>
+    <Heading size="S">普通设置</Heading>
     <div class="fields">
       <div class="field">
         <Label size="L">Email</Label>
         <Input disabled thin value={$userFetch?.data?.email} />
       </div>
       <div class="field">
-        <Label size="L">Group(s)</Label>
+        <Label size="L">分组</Label>
         <Select disabled options={["All users"]} value="All users" />
       </div>
       <div class="field">
-        <Label size="L">First name</Label>
+        <Label size="L">名</Label>
         <Input
           thin
           value={$userFetch?.data?.firstName}
@@ -157,7 +154,7 @@
         />
       </div>
       <div class="field">
-        <Label size="L">Last name</Label>
+        <Label size="L">姓</Label>
         <Input
           thin
           value={$userFetch?.data?.lastName}
@@ -167,7 +164,7 @@
       <!-- don't let a user remove the privileges that let them be here -->
       {#if userId !== $auth.user._id}
         <div class="field">
-          <Label size="L">Development access</Label>
+          <Label size="L">开发权限</Label>
           <Toggle
             text=""
             value={$userFetch?.data?.builder?.global}
@@ -176,7 +173,7 @@
           />
         </div>
         <div class="field">
-          <Label size="L">Administration access</Label>
+          <Label size="L">管理权限</Label>
           <Toggle
             text=""
             value={$userFetch?.data?.admin?.global}
@@ -191,14 +188,14 @@
         size="S"
         icon="Refresh"
         quiet
-        on:click={resetPasswordModal.show}>Force password reset</ActionButton
+        on:click={resetPasswordModal.show}>强制重置密码</ActionButton
       >
     </div>
   </Layout>
   <Divider size="S" />
   <Layout gap="S" noPadding>
-    <Heading size="S">Configure roles</Heading>
-    <Body>Specify a role to grant access to an app.</Body>
+    <Heading size="S">配置用户角色</Heading>
+    <Body>指定角色并授权.</Body>
     <Table
       on:click={openUpdateRolesModal}
       schema={roleSchema}
@@ -210,11 +207,8 @@
     />
   </Layout>
   <Layout gap="S" noPadding>
-    <Heading size="XS">No Access</Heading>
-    <Body
-      >Apps do not appear in the users portal. Public pages may still be viewed
-      if visited directly.</Body
-    >
+    <Heading size="XS">没有权限</Heading>
+    <Body>该页面不显示应用列表</Body>
     <Table
       on:click={openUpdateRolesModal}
       schema={noRoleSchema}
@@ -226,11 +220,11 @@
   </Layout>
   <Divider size="S" />
   <Layout gap="XS" noPadding>
-    <Heading size="S">Delete user</Heading>
-    <Body>Deleting a user completely removes them from your account.</Body>
+    <Heading size="S">删除用户</Heading>
+    <Body>从你的账户中彻底删除某个用户</Body>
   </Layout>
   <div class="delete-button">
-    <Button warning on:click={deleteUserModal.show}>Delete user</Button>
+    <Button warning on:click={deleteUserModal.show}>删除用户</Button>
   </div>
 </Layout>
 
@@ -244,7 +238,7 @@
     showCloseIcon={false}
   >
     <Body>
-      Are you sure you want to delete <strong>{$userFetch?.data?.email}</strong>
+      确定要删除 <strong>{$userFetch?.data?.email}</strong>
     </Body>
   </ModalContent>
 </Modal>

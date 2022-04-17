@@ -61,8 +61,7 @@
   <Layout gap="XS" noPadding>
     <Heading>Users</Heading>
     <Body>
-      Each user is assigned to a group that contains apps and permissions. In
-      this section, you can add users, or edit and delete an existing user.
+      每个用户都会被分配到某个分组里，分组里会包含应用权限。在这里，你可以添加、编辑或者修改用户
     </Body>
   </Layout>
   <Divider size="S" />
@@ -70,14 +69,14 @@
     <div class="users-heading">
       <Heading size="S">Users</Heading>
       <ButtonGroup>
-        <Button disabled secondary>Import users</Button>
+        <Button disabled secondary>导入用户</Button>
         <Button primary dataCy="add-user" on:click={createUserModal.show}
-          >Add user</Button
+          >添加用户</Button
         >
       </ButtonGroup>
     </div>
     <div class="field">
-      <Label size="L">Search / filter</Label>
+      <Label size="L">搜索 / 查找</Label>
       <Search bind:value={search} placeholder="" />
     </div>
     <Table

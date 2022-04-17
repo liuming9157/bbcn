@@ -24,15 +24,11 @@
     <Layout>
       <img src={Logo} alt="logo" />
       <Layout gap="XS" justifyItems="center" noPadding>
-        <Heading size="M">Accept Invitation</Heading>
-        <Body textAlign="center" size="M">
-          Please enter a password to set up your user.
-        </Body>
+        <Heading size="M">接受邀请</Heading>
+        <Body textAlign="center" size="M">输入密码创建用户.</Body>
       </Layout>
       <PasswordRepeatInput bind:error bind:password />
-      <Button disabled={error} cta on:click={acceptInvite}>
-        Accept invite
-      </Button>
+      <Button disabled={error} cta on:click={acceptInvite}>接受邀请</Button>
     </Layout>
   </div>
 </section>

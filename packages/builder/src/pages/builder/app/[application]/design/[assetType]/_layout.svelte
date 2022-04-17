@@ -179,14 +179,14 @@
           <Layout gap="S" justifyItems="center">
             <img class="img-size" alt="logo" src={Logo} />
             <div class="new-screen-text">
-              <Detail size="M">LET’S BRING THIS APP TO LIFE</Detail>
+              <Detail size="M">让我们做出漂亮的应用吧</Detail>
             </div>
             <Button on:click={() => showModal()} size="M" cta>
               <div class="new-screen-button">
                 <div class="background-icon" style="color: white;">
                   <Icon name="Add" />
                 </div>
-                Add Screen
+                添加Screen
               </div></Button
             >
           </Layout>

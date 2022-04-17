@@ -62,7 +62,7 @@
     <Layout>
       <Layout noPadding justifyItems="center">
         <img alt="logo" src={$organisation.logoUrl || Logo} />
-        <Heading>Sign in to {company}</Heading>
+        <Heading>登陆到 {company}</Heading>
       </Layout>
       {#if loaded}
         <GoogleButton />
@@ -70,19 +70,14 @@
       {/if}
       <Divider noGrid />
       <Layout gap="XS" noPadding>
-        <Body size="S" textAlign="center">Sign in with email</Body>
-        <Input label="Email" bind:value={username} />
-        <Input
-          label="Password"
-          type="password"
-          on:change
-          bind:value={password}
-        />
+        <Body size="S" textAlign="center">邮箱登陆</Body>
+        <Input label="邮箱" bind:value={username} />
+        <Input label="密码" type="password" on:change bind:value={password} />
       </Layout>
       <Layout gap="XS" noPadding>
-        <Button cta on:click={login}>Sign in to {company}</Button>
+        <Button cta on:click={login}>登录到{company}</Button>
         <ActionButton quiet on:click={() => $goto("./forgot")}>
-          Forgot password?
+          忘记密码?
         </ActionButton>
         {#if multiTenancyEnabled && !cloud}
           <ActionButton
@@ -92,18 +87,16 @@
               $goto("./org")
             }}
           >
-            Change organisation
+            更换组织
           </ActionButton>
         {/if}
       </Layout>
       {#if cloud}
         <Body size="xs" textAlign="center">
-          By using Budibase Cloud
+          使用BBCN Cloud
           <br />
-          you are agreeing to our
-          <Link href="https://budibase.com/eula" target="_blank"
-            >License Agreement</Link
-          >
+          同意我们的
+          <Link href="https://budibase.com/eula" target="_blank">许可协议</Link>
         </Body>
       {/if}
     </Layout>

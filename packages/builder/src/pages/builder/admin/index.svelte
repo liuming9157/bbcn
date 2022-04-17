@@ -58,19 +58,15 @@
     <Layout>
       <img alt="logo" src={Logo} />
       <Layout gap="XS" justifyItems="center" noPadding>
-        <Heading size="M">Create an admin user</Heading>
-        <Body size="M" textAlign="center">
-          The admin user has access to everything in Budibase.
-        </Body>
+        <Heading size="M">创建管理员用户</Heading>
+        <Body size="M" textAlign="center">管理员用户拥有BBCN所有权限.</Body>
       </Layout>
       <Layout gap="XS" noPadding>
         <Input label="Email" bind:value={adminUser.email} />
         <PasswordRepeatInput bind:password={adminUser.password} bind:error />
       </Layout>
       <Layout gap="XS" noPadding>
-        <Button cta disabled={error} on:click={save}>
-          Create super admin user
-        </Button>
+        <Button cta disabled={error} on:click={save}>创建超级管理员用户</Button>
         {#if multiTenancyEnabled}
           <ActionButton
             quiet
@@ -79,7 +75,7 @@
               $goto("../auth/org")
             }}
           >
-            Change organisation
+            修改组织
           </ActionButton>
         {:else if !cloud && !imported}
           <ActionButton
@@ -88,7 +84,7 @@
               modal.show()
             }}
           >
-            Import from cloud
+            从cloud导入
           </ActionButton>
         {/if}
       </Layout>

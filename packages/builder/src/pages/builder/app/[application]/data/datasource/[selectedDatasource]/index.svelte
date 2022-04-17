@@ -117,18 +117,16 @@
         <div class="query-buttons">
           {#if datasource?.source === IntegrationTypes.REST}
             <Button secondary on:click={() => importQueriesModal.show()}
-              >Import</Button
+              >导入</Button
             >
           {/if}
           <Button cta icon="Add" on:click={() => $goto("./new")}
-            >Add query
+            >添加Query
           </Button>
         </div>
       </div>
       <Body size="S">
-        To build an app using a datasource, you must first query the data. A
-        query is a request for data or information from a datasource, for
-        example a database table.
+        使用数据源创建应用，你必须首先查询数据。Query就是指从数据源查询数据的过程。
       </Body>
       {#if queryList && queryList.length > 0}
         <div class="query-list">

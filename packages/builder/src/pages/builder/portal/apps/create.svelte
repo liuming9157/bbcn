@@ -20,10 +20,9 @@
   let creationModal = false
   let creatingApp = false
 
-  const welcomeBody =
-    "Start from scratch or get a head start with one of our templates"
-  const createAppTitle = "Create new app"
-  const createAppButtonText = "Start from scratch"
+  const welcomeBody = "从0开始或者使用我们的模板"
+  const createAppTitle = "创建新应用"
+  const createAppButtonText = "从0开始"
 
   onMount(async () => {
     try {
@@ -68,7 +67,7 @@
           $goto("../")
         }}
       >
-        Back
+        返回
       </Button>
     </span>
 
@@ -99,7 +98,7 @@
             secondary
             on:click={initiateAppImport}
           >
-            Import app
+            导入应用
           </Button>
         </div>
       </div>

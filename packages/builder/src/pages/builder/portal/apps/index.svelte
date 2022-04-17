@@ -48,18 +48,16 @@
 
   const resolveWelcomeMessage = (auth, apps) => {
     const userWelcome = auth?.user?.firstName
-      ? `Welcome ${auth?.user?.firstName}!`
-      : "Welcome back!"
-    return apps?.length ? userWelcome : "Let's create your first app!"
+      ? `欢迎 ${auth?.user?.firstName}!`
+      : "欢迎回来!"
+    return apps?.length ? userWelcome : "开始创建你的第一个应用吧!"
   }
   $: welcomeHeader = resolveWelcomeMessage($auth, $apps)
   $: welcomeBody = $apps?.length
-    ? "Manage your apps and get a head start with templates"
-    : "Start from scratch or get a head start with one of our templates"
+    ? "管理你的应用并使用模板创建"
+    : "从0开始或使用模板创建应用"
 
-  $: createAppButtonText = $apps?.length
-    ? "Create new app"
-    : "Start from scratch"
+  $: createAppButtonText = $apps?.length ? "创建新应用" : "从0开始"
 
   $: enrichedApps = enrichApps($apps, $auth.user, sortBy)
   $: filteredApps = enrichedApps.filter(app =>
@@ -207,7 +205,7 @@
     try {
       await API.unpublishApp(selectedApp.prodId)
       await apps.load()
-      notifications.success("App unpublished successfully")
+      notifications.success("取消发布成功")
     } catch (err) {
       notifications.error("Error unpublishing app")
     }
@@ -227,7 +225,7 @@
       await apps.load()
       // Get checklist, just in case that was the last app
       await admin.init()
-      notifications.success("App deleted successfully")
+      notifications.success("删除应用成功")
     } catch (err) {
       notifications.error("Error deleting app")
     }
@@ -244,7 +242,7 @@
     try {
       await API.releaseAppLock(app.devId)
       await apps.load()
-      notifications.success("Lock released successfully")
+      notifications.success("锁定发布成功")
     } catch (err) {
       notifications.error("Error releasing lock")
     }
@@ -359,7 +357,7 @@
                     secondary
                     on:click={initiateAppsExport}
                   >
-                    Export apps
+                    导出应用
                   </Button>
                 {/if}
                 <div class="filter">
@@ -369,12 +367,12 @@
                     bind:value={sortBy}
                     placeholder={null}
                     options={[
-                      { label: "Sort by name", value: "name" },
-                      { label: "Sort by recently updated", value: "updated" },
-                      { label: "Sort by status", value: "status" },
+                      { label: "按照名称", value: "name" },
+                      { label: "按照更新时间", value: "updated" },
+                      { label: "按照状态", value: "status" },
                     ]}
                   />
-                  <Search placeholder="Search" bind:value={searchTerm} />
+                  <Search placeholder="搜索" bind:value={searchTerm} />
                 </div>
               </div>
             {/if}
@@ -402,7 +400,7 @@
     {#if creatingFromTemplate}
       <div class="empty-wrapper">
         <img class="img-logo img-size" alt="logo" src={Logo} />
-        <p>Creating your Budibase app from your selected template...</p>
+        <p>使用选中模板创建你的BBCN模板</p>
         <Spinner size="10" />
       </div>
     {/if}
@@ -424,8 +422,8 @@
 
 <ConfirmDialog
   bind:this={deletionModal}
-  title="Confirm deletion"
-  okText="Delete app"
+  title="确认删除"
+  okText="删除应用"
   onOk={confirmDeleteApp}
   onCancel={() => (appName = null)}
   disabled={appName !== selectedApp?.name}
@@ -441,8 +439,8 @@
 </ConfirmDialog>
 <ConfirmDialog
   bind:this={unpublishModal}
-  title="Confirm unpublish"
-  okText="Unpublish app"
+  title="确认取消发布"
+  okText="取消发布"
   onOk={confirmUnpublishApp}
 >
   Are you sure you want to unpublish the app <b>{selectedApp?.name}</b>?

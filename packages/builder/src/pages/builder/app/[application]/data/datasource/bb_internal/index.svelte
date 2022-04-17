@@ -20,8 +20,7 @@
         <Heading size="M">Budibase Internal</Heading>
       </header>
       <Body size="M">
-        Budibase internal tables are part of your app, so the data will be
-        stored in your apps context.
+        BBCN内部数据库是应用的一部分，所以数据会保存在应用中.
       </Body>
     </Layout>
     <Divider />
@@ -34,13 +33,13 @@
         >
           <Body size="S">{table.name}</Body>
           {#if table.primaryDisplay}
-            <Body size="S">Display column: {table.primaryDisplay}</Body>
+            <Body size="S">展示列: {table.primaryDisplay}</Body>
           {/if}
         </div>
       {/each}
     </div>
     <div>
-      <Button cta on:click={modal.show}>Create new table</Button>
+      <Button cta on:click={modal.show}>创建新数据表</Button>
     </div>
   </Layout>
 </section>

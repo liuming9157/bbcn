@@ -29,10 +29,10 @@
             >
               <use xlink:href="#spectrum-icon-18-WorkflowAdd" />
             </svg>
-            <Heading size="M">You have no automations</Heading>
-            <Body size="M">Let's fix that. Call the bots!</Body>
+            <Heading size="M">你没有automations</Heading>
+            <Body size="M">呼叫bot以完善automation!</Body>
             <Button on:click={() => modal.show()} size="M" cta
-              >Create automation</Button
+              >创建automation</Button
             >
           </Layout>
         </div>

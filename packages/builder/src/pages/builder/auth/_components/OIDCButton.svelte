@@ -42,7 +42,7 @@
   >
     <div class="inner">
       <img {src} alt="oidc icon" />
-      <p>{`Sign in with ${$oidc.name || "OIDC"}`}</p>
+      <p>{`使用 ${$oidc.name || "OIDC"}登陆`}</p>
     </div>
   </ActionButton>
 {/if}

@@ -10,8 +10,8 @@
 </script>
 
 {#if $datasources.list.length === 0}
-  <i>Connect your first datasource to start building.</i>
-{:else}<i>Select a datasource to edit</i>{/if}
+  <i>连接你的第一个数据.</i>
+{:else}<i>修改数据库连接</i>{/if}
 
 <style>
   i {

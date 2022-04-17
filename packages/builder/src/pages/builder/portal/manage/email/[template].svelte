@@ -36,7 +36,7 @@
     try {
       // Save your template config
       await email.templates.save(selectedTemplate)
-      notifications.success("Template saved")
+      notifications.success("模板保存成功")
     } catch (error) {
       notifications.error("Failed to update template settings")
     }
@@ -80,20 +80,19 @@
         size="S"
         icon="BackAndroid"
       >
-        Back to email settings
+        返回邮件设置
       </ActionButton>
     </div>
     <header>
       <Heading>
-        Email Template: {name}
+        邮件模板: {name}
       </Heading>
-      <Button cta on:click={saveTemplate}>Save</Button>
+      <Button cta on:click={saveTemplate}>保存</Button>
     </header>
     <Body>
       {description}
       <br />
-      Change the email template here. Add dynamic content by using the bindings menu
-      on the right.
+      在这里修改邮件模板，通过使用右侧的绑定菜单添加动态内容。
     </Body>
   </Layout>
   <div>
@@ -117,14 +116,14 @@
               <Tabs selected="Template">
                 <Tab title="Template">
                   <TemplateBindings
-                    title="Template Bindings"
+                    title="模板绑定"
                     bindings={templateBindings}
                     onBindingClick={setTemplateBinding}
                   />
                 </Tab>
                 <Tab title="Common">
                   <TemplateBindings
-                    title="Common Bindings"
+                    title="通用绑定"
                     bindings={$email?.definitions?.bindings?.common}
                     onBindingClick={setTemplateBinding}
                   />

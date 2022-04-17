@@ -24,7 +24,7 @@
         admin,
         forceResetPassword: true,
       })
-      notifications.success("Successfully created user")
+      notifications.success("添加用户成功")
     } catch (error) {
       notifications.error("Error creating user")
     }
@@ -34,31 +34,28 @@
 <ModalContent
   onConfirm={createUser}
   size="M"
-  title="Basic user onboarding"
-  confirmText="Continue"
-  cancelText="Cancel"
+  title="基础用户登陆"
+  confirmText="继续"
+  cancelText="取消"
   disabled={$error}
   error={$touched && $error}
   showCloseIcon={false}
 >
-  <Body size="S">
-    Below you will find the user’s username and password. The password will not
-    be accessible from this point. Please save the credentials.
-  </Body>
+  <Body size="S">接下来你会发现用户名和密码，记得要保存。</Body>
   <Input
     type="email"
-    label="Username"
+    label="用户名"
     bind:value={$email}
     error={$touched && $error}
   />
-  <Input disabled label="Password" value={password} />
+  <Input disabled label="密码" value={password} />
   <div>
     <div class="toggle">
-      <Label size="L">Development access</Label>
+      <Label size="L">开发权限</Label>
       <Toggle text="" bind:value={builder} />
     </div>
     <div class="toggle">
-      <Label size="L">Administration access</Label>
+      <Label size="L">管理权限</Label>
       <Toggle text="" bind:value={admin} />
     </div>
   </div>

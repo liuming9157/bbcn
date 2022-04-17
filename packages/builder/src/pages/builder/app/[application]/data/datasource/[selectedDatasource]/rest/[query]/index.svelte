@@ -313,7 +313,7 @@
             on:save={saveQuery}
           />
           <div class="access">
-            <Label>Access level</Label>
+            <Label>权限等级</Label>
             <AccessLevelSelect {query} {saveId} />
           </div>
         </div>
@@ -336,15 +336,15 @@
             cta
             on:click={saveQuery}
             tooltip={!hasSchema
-              ? "Saving a query before sending will mean no schema is generated"
-              : null}>Save</Button
+              ? "在发送之前保存query意味着没有schema生成"
+              : null}>保存</Button
           >
         </div>
         <Tabs selected="Bindings" quiet noPadding noHorizPadding onTop>
           <Tab title="Bindings">
             <KeyValueBuilder
               bind:object={bindings}
-              tooltip="Set the name of the binding which can be used in Handlebars statements throughout your query"
+              tooltip="为binding设置名称"
               name="binding"
               headings
               keyPlaceholder="Binding name"

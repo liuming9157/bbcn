@@ -79,23 +79,23 @@
                 <Icon size="XL" name="ChevronDown" />
               </div>
               <MenuItem icon="UserEdit" on:click={() => userInfoModal.show()}>
-                Update user information
+                修改用户信息
               </MenuItem>
               <MenuItem
                 icon="LockClosed"
                 on:click={() => changePasswordModal.show()}
               >
-                Update password
+                修改密码
               </MenuItem>
               {#if $auth.isBuilder}
                 <MenuItem
                   icon="UserDeveloper"
                   on:click={() => $goto("../portal")}
                 >
-                  Open developer mode
+                  打开开发模式
                 </MenuItem>
               {/if}
-              <MenuItem icon="LogOut" on:click={logout}>Log out</MenuItem>
+              <MenuItem icon="LogOut" on:click={logout}>退出登陆</MenuItem>
             </ActionMenu>
           </div>
           <Layout noPadding gap="XS">
@@ -103,13 +103,12 @@
               Hey {$auth.user.firstName || $auth.user.email}
             </Heading>
             <Body>
-              Welcome to the {$organisation.company} portal. Below you'll find the
-              list of apps that you have access to.
+              欢迎来到 {$organisation.company}.在下面你可以看到所有应用.
             </Body>
           </Layout>
           <Divider />
           {#if userApps.length}
-            <Heading>Apps</Heading>
+            <Heading>应用列表</Heading>
             <div class="group">
               <Layout gap="S" noPadding>
                 {#each userApps as app, idx (app.appId)}
@@ -128,7 +127,7 @@
                             }
                           )}
                         {:else}
-                          Never updated
+                          不更新
                         {/if}
                       </Body>
                     </div>
@@ -139,9 +138,9 @@
             </div>
           {:else}
             <Layout gap="XS" noPadding>
-              <Heading size="S">You don't have access to any apps yet.</Heading>
+              <Heading size="S">你还没有应用权限.</Heading>
               <Body size="S">
-                The apps you have access to will be listed here.
+                当你有应用权限时，此处将展示你可以看到的应用.
               </Body>
             </Layout>
           {/if}

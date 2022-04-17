@@ -45,10 +45,7 @@
     onConfirm={saveVariable}
     disabled={!valid}
   >
-    <Body size="S"
-      >Specify a name for your new dynamic variable, this must be unique across
-      your datasource.</Body
-    >
-    <Input label="Variable name" bind:value={name} on:input {error} />
+    <Body size="S">为你的新变量指定一个唯一的名称.</Body>
+    <Input label="变量名称" bind:value={name} on:input {error} />
   </ModalContent>
 </Modal>

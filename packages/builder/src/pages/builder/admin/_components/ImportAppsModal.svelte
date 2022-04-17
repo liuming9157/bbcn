@@ -31,10 +31,7 @@
   onConfirm={importApps}
   disabled={!value.file}
 >
-  <Body>
-    Please upload the file that was exported from your Cloud environment to get
-    started
-  </Body>
+  <Body>上传之前导出的应用文件</Body>
   <Dropzone
     gallery={false}
     label="File to import"

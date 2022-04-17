@@ -16,7 +16,7 @@
   >
     <div class="inner">
       <img src={GoogleLogo} alt="google icon" />
-      <p>Sign in with Google</p>
+      <p>使用Google登陆</p>
     </div>
   </ActionButton>
 {/if}

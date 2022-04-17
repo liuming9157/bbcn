@@ -5,7 +5,7 @@
 
 {#if $database?._id && $tables?.selected?.name}
   <TableDataTable />
-{:else}<i>Create your first table to start building</i>{/if}
+{:else}<i>创建第一个数据表</i>{/if}
 
 <style>
   i {
