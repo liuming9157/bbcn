@@ -49,11 +49,11 @@
   <span> · </span>
   <a href="https://bbcn-doc.vercel.app">文档</a>
   <span> · </span>
-  <a href="https://github.com/Budibase/budibase/discussions?discussions_q=category%3AIdeas">提出需求</a>
+  <a href="https://github.com/liuming9157/bbcn/discussions?discussions_q=category%3AIdeas">提出需求</a>
   <span> · </span>
-  <a href="https://github.com/Budibase/budibase/issues">报告Bug</a>
+  <a href="https://github.com/liuming9157/bbcn/issues">报告Bug</a>
   <span> · </span>
-  支持: <a href="https://github.com/Budibase/budibase/discussions">讨论区</a>
+  支持: <a href="https://github.com/liuming9157/bbcn/discussions">讨论区</a>
   <span> & </span>
   <a href="https://discord.gg/rCYayfe">Discord</a>
 </h3>
