@@ -314,7 +314,7 @@
                 secondary
                 on:click={$goto("/builder/portal/apps/templates")}
               >
-                Templates
+                模板
               </Button>
             {/if}
             {#if !$apps?.length}
@@ -346,7 +346,7 @@
       {#if enrichedApps.length}
         <Layout noPadding gap="S">
           <div class="title">
-            <Detail size="L">My apps</Detail>
+            <Detail size="L">我的应用</Detail>
             {#if enrichedApps.length > 1}
               <div class="app-actions">
                 {#if cloud}
@@ -428,9 +428,9 @@
   onCancel={() => (appName = null)}
   disabled={appName !== selectedApp?.name}
 >
-  Are you sure you want to delete the app <b>{selectedApp?.name}</b>?
+  危险操作。确定要删除 <b>{selectedApp?.name}</b>?
 
-  <p>Please enter the app name below to confirm.</p>
+  <p>请再次输入应用名称以确认</p>
   <Input
     bind:value={appName}
     data-cy="delete-app-confirmation"
@@ -443,7 +443,7 @@
   okText="取消发布"
   onOk={confirmUnpublishApp}
 >
-  Are you sure you want to unpublish the app <b>{selectedApp?.name}</b>?
+  确定要取消发布<b>{selectedApp?.name}</b>?
 </ConfirmDialog>
 
 <ChooseIconModal app={selectedApp} bind:this={iconModal} />

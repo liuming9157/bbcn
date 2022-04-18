@@ -14,7 +14,7 @@
     "test": "jest --coverage --maxWorkers=2",
     "test:watch": "jest --watch",
     "predocker": "copyfiles -f ../client/dist/budibase-client.js ../client/manifest.json client",
-    "build:docker": "yarn run predocker && docker build . -t app-service --label version=$BUDIBASE_RELEASE_VERSION",
+    "build:docker": "yarn run predocker && docker build . -t liuming9157/bbcn --label version=$BUDIBASE_RELEASE_VERSION",
     "build:docs": "node ./scripts/docs/generate.js open",
     "run:docker": "node dist/index.js",
     "dev:stack:up": "node scripts/dev/manage.js up",

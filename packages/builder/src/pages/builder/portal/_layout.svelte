@@ -30,23 +30,23 @@
   $: menu = buildMenu($auth.isAdmin)
 
   const buildMenu = admin => {
-    let menu = [{ title: "Apps", href: "/builder/portal/apps" }]
+    let menu = [{ title: "应用", href: "/builder/portal/apps" }]
     if (admin) {
       menu = menu.concat([
         {
-          title: "Users",
+          title: "用户",
           href: "/builder/portal/manage/users",
-          heading: "Manage",
+          heading: "管理",
         },
-        { title: "Auth", href: "/builder/portal/manage/auth" },
-        { title: "Email", href: "/builder/portal/manage/email" },
+        { title: "权限", href: "/builder/portal/manage/auth" },
+        { title: "邮件", href: "/builder/portal/manage/email" },
         {
-          title: "Organisation",
+          title: "组织",
           href: "/builder/portal/settings/organisation",
-          heading: "Settings",
+          heading: "设置",
         },
         {
-          title: "Theming",
+          title: "主题",
           href: "/builder/portal/settings/theming",
         },
       ])
@@ -54,7 +54,7 @@
       if (!$adminStore.cloud) {
         menu = menu.concat([
           {
-            title: "Updates",
+            title: "更新",
             href: "/builder/portal/settings/update",
           },
         ])
@@ -62,9 +62,9 @@
     } else {
       menu = menu.concat([
         {
-          title: "Theming",
+          title: "主题",
           href: "/builder/portal/settings/theming",
-          heading: "Settings",
+          heading: "设置",
         },
       ])
     }
@@ -73,7 +73,7 @@
     if ($auth?.user?.accountPortalAccess) {
       menu = menu.concat([
         {
-          title: "Account",
+          title: "账户",
           href: $adminStore.accountPortalUrl,
         },
       ])
@@ -162,23 +162,23 @@
               <Icon size="XL" name="ChevronDown" />
             </div>
             <MenuItem icon="UserEdit" on:click={() => userInfoModal.show()}>
-              Update user information
+              修改用户信息
             </MenuItem>
             {#if $auth.isBuilder}
               <MenuItem icon="Key" on:click={() => apiKeyModal.show()}>
-                View API key
+                查看 API key
               </MenuItem>
             {/if}
             <MenuItem
               icon="LockClosed"
               on:click={() => changePasswordModal.show()}
             >
-              Update password
+              修改密码
             </MenuItem>
             <MenuItem icon="UserDeveloper" on:click={() => $goto("../apps")}>
-              Close developer mode
+              关闭开发模式
             </MenuItem>
-            <MenuItem icon="LogOut" on:click={logout}>Log out</MenuItem>
+            <MenuItem icon="LogOut" on:click={logout}>退出登陆</MenuItem>
           </ActionMenu>
         </div>
       </div>

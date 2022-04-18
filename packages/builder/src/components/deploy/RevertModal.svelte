@@ -31,16 +31,15 @@
 <Icon name="Revert" hoverable on:click={revertModal.show} />
 <Modal bind:this={revertModal}>
   <ModalContent
-    title="Revert Changes"
-    confirmText="Revert"
+    title="撤销修改"
+    confirmText="撤销"
     onConfirm={revert}
     disabled={appName !== $store.name}
   >
     <span
-      >The changes you have made will be deleted and the application reverted
-      back to its production state.</span
+      >你的修改将会被删除，应用恢复到正式环境状态.</span
     >
-    <span>Please enter your app name to continue.</span>
+    <span>输入你的应用名称以继续.</span>
     <Input bind:value={appName} />
   </ModalContent>
 </Modal>

@@ -33,7 +33,7 @@
           $goto("../")
         }}
       >
-        Back
+        返回
       </Button>
     </span>
     {#if loaded && $templates?.length}

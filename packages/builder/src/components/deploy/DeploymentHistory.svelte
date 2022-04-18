@@ -94,8 +94,8 @@
       <Heading>Deployment History</Heading>
       <div class="deploy-div">
         {#if deployments.some(deployment => deployment.status === DeploymentStatus.SUCCESS)}
-          <a target="_blank" href={deploymentUrl}> View Your Deployed App → </a>
-          <Button primary on:click={() => modal.show()}>View webhooks</Button>
+          <a target="_blank" href={deploymentUrl}> 查看你的应用→ </a>
+          <Button primary on:click={() => modal.show()}>查看webhooks</Button>
         {/if}
       </div>
     </header>

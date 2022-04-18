@@ -114,8 +114,8 @@
 </script>
 
 <ModalContent
-  title={"Create your app"}
-  confirmText={template?.fromFile ? "Import app" : "Create app"}
+  title={"创建应用"}
+  confirmText={template?.fromFile ? "导入应用" : "创建应用"}
   onConfirm={createNewApp}
   disabled={!$validation.valid}
 >
@@ -146,7 +146,7 @@
     error={$validation.touched.name && $validation.errors.name}
     on:blur={() => ($validation.touched.name = true)}
     on:change={nameToUrl($values.name)}
-    label="Name"
+    label="名称"
     placeholder={$auth.user?.firstName
       ? `${$auth.user.firstName}s app`
       : "My app"}

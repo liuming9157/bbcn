@@ -56,7 +56,7 @@
 
 <div class="template-header">
   <Layout noPadding gap="S">
-    <Heading size="S">Templates</Heading>
+    <Heading size="S">模板</Heading>
     <div class="template-category-filters spectrum-ActionGroup">
       <ActionGroup>
         <ActionButton
@@ -65,7 +65,7 @@
             selectedTemplateCategory = null
           }}
         >
-          All
+          全部
         </ActionButton>
         {#each templateCategories as templateCategoryKey}
           <ActionButton

@@ -73,13 +73,13 @@
 
 <Modal bind:this={modal} on:hide={onCancel}>
   <ModalContent
-    title={"Edit Icon"}
-    confirmText={"Save"}
+    title={"修改图标"}
+    confirmText={"保存"}
     onConfirm={() => save()}
   >
     <div class="scrollable-icons">
       <div class="title-spacing">
-        <Label>Select an icon</Label>
+        <Label>选择图标</Label>
       </div>
       <div class="grid">
         {#each iconsList as item}
@@ -95,7 +95,7 @@
     </div>
     <div class="color-selection">
       <div>
-        <Label>Select a color</Label>
+        <Label>选择颜色</Label>
       </div>
       <div class="color-selection-item">
         <ColorPicker

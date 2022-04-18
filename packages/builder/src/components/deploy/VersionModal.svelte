@@ -62,34 +62,32 @@
 </div>
 <Modal bind:this={updateModal}>
   <ModalContent
-    title="App version"
-    confirmText="Update"
-    cancelText={updateAvailable ? "Cancel" : "Close"}
+    title="应用版本"
+    confirmText="更新"
+    cancelText={updateAvailable ? "取消" : "关闭"}
     onConfirm={update}
     showConfirmButton={updateAvailable}
   >
     <div slot="footer">
       {#if revertAvailable}
-        <Button quiet secondary on:click={revert}>Revert</Button>
+        <Button quiet secondary on:click={revert}>撤销</Button>
       {/if}
     </div>
     {#if updateAvailable}
       <Body size="S">
-        This app is currently using version <b>{$store.version}</b>, but version
-        <b>{clientPackage.version}</b> is available. Updates can contain new features,
-        performance improvements and bug fixes.
+        当前应用版本是 <b>{$store.version}</b>, 新版本
+        <b>{clientPackage.version}</b> 已发布. 更新版本可以获得更多功能、提升性能及bug修复.
       </Body>
     {:else}
       <Body size="S">
-        This app is currently using version <b>{$store.version}</b> which is the
-        latest version available.
+        当前版本号<b>{$store.version}</b> 已是最新版本.
       </Body>
     {/if}
     {#if revertAvailable}
       <Body size="S">
-        You can revert this app to version
+        如果你当前版本出现bug,你可以回滚到版本
         <b>{$store.revertableVersion}</b>
-        if you're experiencing issues with the current version.
+        
       </Body>
     {/if}
   </ModalContent>

@@ -21,10 +21,10 @@
   }
 </script>
 
-<Button secondary on:click={publishModal.show}>Publish</Button>
+<Button secondary on:click={publishModal.show}>发布</Button>
 <Modal bind:this={feedbackModal}>
   <ModalContent
-    title="Enjoying Budibase?"
+    title="喜欢BBCN吗?"
     size="L"
     showConfirmButton={false}
     showCancelButton={false}
@@ -32,13 +32,12 @@
 </Modal>
 <Modal bind:this={publishModal}>
   <ModalContent
-    title="Publish to Production"
-    confirmText="Publish"
+    title="发布到正式环境"
+    confirmText="发布"
     onConfirm={deployApp}
   >
     <span
-      >The changes you have made will be published to the production version of
-      the application.</span
+      >你的修改将会发布到应用正式环境。</span
     >
   </ModalContent>
 </Modal>

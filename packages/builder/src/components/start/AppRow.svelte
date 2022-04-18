@@ -38,7 +38,7 @@
       time: new Date().getTime() - new Date(app.updatedAt).getTime(),
     })}
   {:else}
-    Never updated
+    永不更新
   {/if}
 </div>
 <div class="desktop">
@@ -48,11 +48,11 @@
     negative={app.lockedOther}
   >
     {#if app.lockedYou}
-      Locked by you
+      已被你锁定
     {:else if app.lockedOther}
-      Locked by {app.lockedBy.email}
+      已被{app.lockedBy.email}锁定
     {:else}
-      Open
+      开放
     {/if}
   </StatusLight>
 </div>
@@ -68,31 +68,31 @@
     on:click={() => editApp(app)}
     secondary
   >
-    Open
+    开放
   </Button>
   <ActionMenu align="right">
     <Icon hoverable slot="control" name="More" />
     {#if app.deployed}
       <MenuItem on:click={() => viewApp(app)} icon="GlobeOutline">
-        View published app
+        查看已发布应用
       </MenuItem>
     {/if}
     {#if app.lockedYou}
       <MenuItem on:click={() => releaseLock(app)} icon="LockOpen">
-        Release lock
+        锁定发布
       </MenuItem>
     {/if}
     <MenuItem on:click={() => exportApp(app)} icon="Download">Export</MenuItem>
     {#if app.deployed}
       <MenuItem on:click={() => unpublishApp(app)} icon="GlobeRemove">
-        Unpublish
+        取消发布
       </MenuItem>
     {/if}
     {#if !app.deployed}
-      <MenuItem on:click={() => updateApp(app)} icon="Edit">Edit</MenuItem>
-      <MenuItem on:click={() => deleteApp(app)} icon="Delete">Delete</MenuItem>
+      <MenuItem on:click={() => updateApp(app)} icon="Edit">修改</MenuItem>
+      <MenuItem on:click={() => deleteApp(app)} icon="Delete">删除</MenuItem>
     {/if}
-    <MenuItem on:click={() => editIcon(app)} icon="Brush">Edit icon</MenuItem>
+    <MenuItem on:click={() => editIcon(app)} icon="Brush">修改图标</MenuItem>
   </ActionMenu>
 </div>
 

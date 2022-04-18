@@ -71,18 +71,18 @@
 </script>
 
 <ModalContent
-  title={"Edit app"}
-  confirmText={"Save"}
+  title={"修改应用"}
+  confirmText={"保存"}
   onConfirm={updateApp}
   disabled={!$validation.valid}
 >
-  <Body size="S">Update the name of your app.</Body>
+  <Body size="S">修改应用名称.</Body>
   <Input
     bind:value={$values.name}
     error={$validation.touched.name && $validation.errors.name}
     on:blur={() => ($validation.touched.name = true)}
     on:change={nameToUrl($values.name)}
-    label="Name"
+    label="名称"
   />
   <Input
     bind:value={$values.url}

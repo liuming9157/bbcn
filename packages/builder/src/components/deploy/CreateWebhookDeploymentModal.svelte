@@ -35,7 +35,7 @@
     </div>
   {/each}
   {#if webhookUrls.length === 0}
-    <h5>No webhooks found.</h5>
+    <h5>没有找到webhooks.</h5>
   {/if}
   <a
     slot="footer"
@@ -43,7 +43,7 @@
     href="https://docs.budibase.com/docs/trigger"
   >
     <i class="ri-information-line" />
-    <span>Learn about webhooks</span>
+    <span>了解webhooks</span>
   </a>
 </ModalContent>
 
