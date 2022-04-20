@@ -10,8 +10,8 @@
 </script>
 
 <ModalContent
-  title="Select navigation"
-  cancelText="Back"
+  title="选择导航"
+  cancelText="返回"
   onCancel={() => (blankSelected ? chooseModal(1) : chooseModal(0))}
   size="M"
   onConfirm={() => {
@@ -20,7 +20,7 @@
   disabled={!selectedNav}
 >
   <Body size="S"
-    >Please select your preferred layout for the new application:</Body
+    >为新应用选择你喜欢的布局:</Body
   >
 
   <div class="wrapper">
@@ -32,7 +32,7 @@
       <div class="box">
         <div class="side-nav" />
       </div>
-      <div><Detail>Side Nav</Detail></div>
+      <div><Detail>侧边栏导航</Detail></div>
     </div>
     <div
       on:click={() => (selectedNav = "Top")}
@@ -41,14 +41,14 @@
       <div class="box">
         <div class="top-nav" />
       </div>
-      <div><Detail>Top Nav</Detail></div>
+      <div><Detail>顶部导航</Detail></div>
     </div>
     <div
       on:click={() => (selectedNav = "None")}
       class:unselected={selectedNav && selectedNav !== "None"}
     >
       <div class="box" />
-      <div><Detail>No Nav</Detail></div>
+      <div><Detail>没有导航</Detail></div>
     </div>
   </div>
 </ModalContent>

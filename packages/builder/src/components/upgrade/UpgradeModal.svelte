@@ -15,19 +15,18 @@
     quiet
     primary
     size="M"
-    icon="DownloadFromCloud">Self-host Budibase</Button
+    icon="DownloadFromCloud">自托管Budibase</Button
   >
 </div>
 <Modal bind:this={upgradeModal}>
   <ModalContent
     size="M"
     {onConfirm}
-    title="Self-host Budibase"
-    confirmText="Self-host Budibase"
+    title="自托管Budibase"
+    confirmText="自托管Budibase"
   >
     <span>
-      Self-host budibase for free to get unlimited apps and more - and it only
-      takes a few minutes!
+      仅需要几分钟即可完成自托管，完全免费且可以创建无限数量的应用，!
     </span>
   </ModalContent>
 </Modal>

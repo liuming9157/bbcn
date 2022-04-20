@@ -91,50 +91,50 @@
       <Icon size="S" hoverable name="MoreSmallList" />
     </div>
     <MenuItem icon="Delete" on:click={confirmDeleteDialog.show}>
-      Delete
+      删除
     </MenuItem>
     <MenuItem noClose icon="ChevronUp" on:click={moveUpComponent}>
-      Move up
+      上移
     </MenuItem>
     <MenuItem noClose icon="ChevronDown" on:click={moveDownComponent}>
-      Move down
+      下移
     </MenuItem>
     <MenuItem noClose icon="Duplicate" on:click={duplicateComponent}>
       Duplicate
     </MenuItem>
     <MenuItem icon="Cut" on:click={() => storeComponentForCopy(true)}>
-      Cut
+      剪切
     </MenuItem>
     <MenuItem icon="Copy" on:click={() => storeComponentForCopy(false)}>
-      Copy
+      复制
     </MenuItem>
     <MenuItem
       icon="LayersBringToFront"
       on:click={() => pasteComponent("above")}
       disabled={noPaste}
     >
-      Paste above
+      上层粘贴
     </MenuItem>
     <MenuItem
       icon="LayersSendToBack"
       on:click={() => pasteComponent("below")}
       disabled={noPaste}
     >
-      Paste below
+      下层粘贴
     </MenuItem>
     <MenuItem
       icon="ShowOneLayer"
       on:click={() => pasteComponent("inside")}
       disabled={noPaste || noChildrenAllowed}
     >
-      Paste inside
+      内部粘贴
     </MenuItem>
   </ActionMenu>
   <ConfirmDialog
     bind:this={confirmDeleteDialog}
-    title="Confirm Deletion"
-    body={`Are you sure you wish to delete this '${definition?.name}' component?`}
-    okText="Delete Component"
+    title="确认删除"
+    body={`确定要删除 '${definition?.name}'组件?`}
+    okText="删除组件"
     onOk={deleteComponent}
   />
 {/if}

@@ -49,20 +49,20 @@
 
 <ConfirmDialog
   bind:this={confirmDeleteDialog}
-  title="Confirm Deletion"
-  body={"Are you sure you wish to delete this layout?"}
-  okText="Delete layout"
+  title="确认删除"
+  body={"确定删除布局?"}
+  okText="删除布局"
   onOk={deleteLayout}
 />
 
 <Modal bind:this={editLayoutNameModal}>
   <ModalContent
-    title="Edit Layout Name"
-    confirmText="Save"
+    title="修改布局名称"
+    confirmText="保存"
     onConfirm={saveLayout}
     disabled={!name}
   >
-    <Input thin type="text" label="Name" bind:value={name} />
+    <Input thin type="text" label="名称" bind:value={name} />
   </ModalContent>
 </Modal>
 

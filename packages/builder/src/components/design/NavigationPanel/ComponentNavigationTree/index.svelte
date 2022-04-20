@@ -61,7 +61,7 @@
   {/each}
   {#if !paths.length}
     <div class="empty">
-      There aren't any screens configured with this access role.
+      此角色配没有任何已配置screen.
     </div>
   {/if}
 </div>

@@ -8,13 +8,13 @@
   async function save() {
     try {
       await store.actions.layouts.save({ name })
-      notifications.success(`Layout ${name} created successfully`)
+      notifications.success(`布局 ${name}创建成功`)
     } catch (error) {
       notifications.error("Error creating layout")
     }
   }
 </script>
 
-<ModalContent title="Create Layout" confirmText="Create" onConfirm={save}>
-  <Input thin label="Name" bind:value={name} />
+<ModalContent title="创建布局" confirmText="创建" onConfirm={save}>
+  <Input thin label="名称" bind:value={name} />
 </ModalContent>

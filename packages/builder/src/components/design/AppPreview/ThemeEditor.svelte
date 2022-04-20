@@ -73,22 +73,22 @@
 </script>
 
 <div class="container">
-  <ActionButton icon="Brush" on:click={modal.show}>Theme</ActionButton>
+  <ActionButton icon="Brush" on:click={modal.show}>主题</ActionButton>
 </div>
 <Modal bind:this={modal}>
   <ModalContent
     showConfirmButton={false}
     cancelText="View changes"
     showCloseIcon={false}
-    title="Theme settings"
+    title="主题设置"
   >
     <Layout noPadding gap="S">
       <div class="setting">
-        <Label size="L">Theme</Label>
+        <Label size="L">主题</Label>
         <AppThemeSelect />
       </div>
       <div class="setting">
-        <Label size="L">Button roundness</Label>
+        <Label size="L">圆形按钮</Label>
         <div class="select-wrapper">
           <Select
             placeholder={null}
@@ -100,7 +100,7 @@
         </div>
       </div>
       <div class="setting">
-        <Label size="L">Accent color</Label>
+        <Label size="L">强调色</Label>
         <ColorPicker
           spectrumTheme={$store.theme}
           value={$store.customTheme?.primaryColor || defaultTheme.primaryColor}
@@ -108,7 +108,7 @@
         />
       </div>
       <div class="setting">
-        <Label size="L">Accent color (hover)</Label>
+        <Label size="L">强调色(hover)</Label>
         <ColorPicker
           spectrumTheme={$store.theme}
           value={$store.customTheme?.primaryColorHover ||
@@ -117,7 +117,7 @@
         />
       </div>
       <div class="setting">
-        <Label size="L">Navigation bar background color</Label>
+        <Label size="L">导航栏背景色</Label>
         <ColorPicker
           spectrumTheme={$store.theme}
           value={$store.customTheme?.navBackground ||
@@ -126,7 +126,7 @@
         />
       </div>
       <div class="setting">
-        <Label size="L">Navigation bar text color</Label>
+        <Label size="L">导航栏文字颜色</Label>
         <ColorPicker
           spectrumTheme={$store.theme}
           value={$store.customTheme?.navTextColor || defaultTheme.navTextColor}

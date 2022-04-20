@@ -89,17 +89,17 @@
 </script>
 
 <Layout gap="S" noPadding>
-  <Heading size="M">Query {integrationInfo?.friendlyName}</Heading>
+  <Heading size="M">查询 {integrationInfo?.friendlyName}</Heading>
   <Divider />
-  <Heading size="S">Config</Heading>
+  <Heading size="S">配置</Heading>
   <div class="config">
     <div class="config-field">
-      <Label>Query Name</Label>
+      <Label>查询名称</Label>
       <Input bind:value={query.name} />
     </div>
     {#if queryConfig}
       <div class="config-field">
-        <Label>Function</Label>
+        <Label>函数</Label>
         <Select
           bind:value={query.queryVerb}
           on:change={resetDependentFields}
@@ -146,7 +146,7 @@
         />
       </div>
       <Body size="S"
-        >Add a JavaScript function to transform the query result.</Body
+        >添加 JavaScript函数以修改查询结果.</Body
       >
       <CodeMirrorEditor
         height={200}
@@ -167,7 +167,7 @@
       </ButtonGroup>
     </div>
     <Body size="S">
-      Below, you can preview the results from your query and change the schema.
+     你可以在下面看到你的查询结果并改变 schema.
     </Body>
     <section class="viewer">
       {#if data}

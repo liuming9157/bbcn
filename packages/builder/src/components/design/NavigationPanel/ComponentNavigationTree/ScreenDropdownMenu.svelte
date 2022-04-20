@@ -89,9 +89,9 @@
 
 <ConfirmDialog
   bind:this={confirmDeleteDialog}
-  title="Confirm Deletion"
-  body={"Are you sure you wish to delete this screen?"}
-  okText="Delete screen"
+  title="确认删除"
+  body={"确认删除此screen?"}
+  okText="删除screen"
   onOk={deleteScreen}
 />
 

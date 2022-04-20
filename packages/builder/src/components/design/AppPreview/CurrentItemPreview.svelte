@@ -227,7 +227,7 @@
     <div class="center error">
       <Layout justifyItems="center" gap="S">
         {@html ErrorSVG}
-        <Heading size="L">App preview failed to load</Heading>
+        <Heading size="L">应用预览加载失败</Heading>
         <Body size="S">{error}</Body>
       </Layout>
     </div>
@@ -243,9 +243,9 @@
 </div>
 <ConfirmDialog
   bind:this={confirmDeleteDialog}
-  title="Confirm Deletion"
-  body={`Are you sure you want to delete this component?`}
-  okText="Delete component"
+  title="确认删除"
+  body={`确认删除此组件?`}
+  okText="删除组件"
   onOk={deleteComponent}
   onCancel={cancelDeleteComponent}
 />

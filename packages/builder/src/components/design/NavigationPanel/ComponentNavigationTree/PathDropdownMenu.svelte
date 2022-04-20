@@ -30,7 +30,7 @@
         }
         await store.actions.screens.delete(screen)
       }
-      notifications.success("Screens deleted successfully")
+      notifications.success("Screens删除成功")
       $goto("../")
     } catch (error) {
       notifications.error("Error deleting screens")
@@ -43,19 +43,19 @@
     <Icon size="S" hoverable name="MoreSmallList" />
   </div>
   <MenuItem icon="Delete" on:click={confirmDeleteDialog.show}>
-    Delete all screens
+    删除所有screens
   </MenuItem>
 </ActionMenu>
 
 <ConfirmDialog
   bind:this={confirmDeleteDialog}
-  title="Confirm Deletion"
-  okText="Delete screens"
+  title="确认删除"
+  okText="删除screens"
   onOk={deleteScreens}
 >
   <Layout noPadding gap="S">
     <div>
-      Are you sure you want to delete all screens under the <b>{path}</b> route?
+     确认删除路径 <b>{path}</b>下所有screen?
     </div>
     <div>The following screens will be deleted:</div>
     <div class="to-delete">
