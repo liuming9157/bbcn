@@ -56,21 +56,20 @@
     <Layout gap="XS" noPadding>
       <Heading size="M">Updates</Heading>
       <Body>
-        Keep your budibase installation up to date to take advantage of the
-        latest features, security updates and much more.
+        让BBCN保持最新版本可以获得更多功能.
       </Body>
     </Layout>
     <Divider size="S" />
     {#if version}
       <div>
-        <Label size="L">Current version</Label>
+        <Label size="L">当前版本</Label>
         <Heading size="XS">
           {version}
         </Heading>
       </div>
     {/if}
     <div>
-      <Button cta on:click={updateBudibase}>Check for updates</Button>
+      <Button cta on:click={updateBudibase}>检查更新</Button>
     </div>
   </Layout>
 {/if}
