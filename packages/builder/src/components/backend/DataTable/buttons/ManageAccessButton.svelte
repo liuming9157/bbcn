@@ -15,7 +15,7 @@
 </script>
 
 <ActionButton icon="LockClosed" size="S" quiet on:click={openDropdown}>
-  Manage access
+  管理权限
 </ActionButton>
 <Modal bind:this={modal}>
   <ManageAccessModal

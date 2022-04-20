@@ -8,7 +8,7 @@
 </script>
 
 <ActionButton icon="DataUpload" size="S" quiet on:click={modal.show}>
-  Import
+  导入
 </ActionButton>
 <Modal bind:this={modal}>
   <ImportModal {tableId} on:updaterows />

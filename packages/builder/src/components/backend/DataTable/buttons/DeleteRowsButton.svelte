@@ -17,17 +17,17 @@
 </script>
 
 <Button icon="Delete" size="s" primary quiet on:click={modal.show}>
-  Delete
+  删除
   {selectedRows.length}
-  row(s)
+  行
 </Button>
 <ConfirmDialog
   bind:this={modal}
-  okText="Delete"
+  okText="删除"
   onOk={confirmDeletion}
-  title="Confirm Deletion"
+  title="确认删除"
 >
-  Are you sure you want to delete
+  确定删除
   {selectedRows.length}
-  row{selectedRows.length > 1 ? "s" : ""}?
+  行?
 </ConfirmDialog>

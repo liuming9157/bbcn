@@ -6,7 +6,7 @@
 </script>
 
 <ActionButton icon="TableColumnAddRight" quiet size="S" on:click={modal.show}>
-  Create column
+  创建列
 </ActionButton>
 <Modal bind:this={modal}>
   <CreateEditColumn on:updatecolumns />

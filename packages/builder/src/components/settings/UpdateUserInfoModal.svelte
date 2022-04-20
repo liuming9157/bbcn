@@ -11,7 +11,7 @@
   const updateInfo = async () => {
     try {
       await auth.updateSelf($values)
-      notifications.success("Information updated successfully")
+      notifications.success("信息修改成功")
     } catch (error) {
       notifications.error("Failed to update information")
     }
@@ -19,14 +19,14 @@
 </script>
 
 <ModalContent
-  title="Update user information"
-  confirmText="Update information"
+  title="修改用户信息"
+  confirmText="修改信息"
   onConfirm={updateInfo}
 >
   <Body size="S">
-    Personalise the platform by adding your first name and last name.
+    在这里输入你的姓名.
   </Body>
   <Input disabled bind:value={$auth.user.email} label="Email" />
-  <Input bind:value={$values.firstName} label="First name" />
-  <Input bind:value={$values.lastName} label="Last name" />
+  <Input bind:value={$values.firstName} label="名" />
+  <Input bind:value={$values.lastName} label="姓" />
 </ModalContent>

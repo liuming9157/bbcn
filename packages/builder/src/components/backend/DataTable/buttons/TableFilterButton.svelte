@@ -20,12 +20,12 @@
   on:click={modal.show}
   active={tempValue?.length > 0}
 >
-  Filter
+  过滤
 </ActionButton>
 <Modal bind:this={modal}>
   <ModalContent
     title="Filter"
-    confirmText="Save"
+    confirmText="保存"
     size="XL"
     onConfirm={() => dispatch("change", tempValue)}
   >

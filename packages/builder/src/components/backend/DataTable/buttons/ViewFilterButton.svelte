@@ -14,7 +14,7 @@
   on:click={modal.show}
   active={view.filters?.length}
 >
-  Filter
+  过滤
 </ActionButton>
 <Modal bind:this={modal}>
   <FilterModal {view} />

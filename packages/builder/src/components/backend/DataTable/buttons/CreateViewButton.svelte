@@ -6,7 +6,7 @@
 </script>
 
 <ActionButton icon="CollectionAdd" size="S" quiet on:click={modal.show}>
-  Create view
+  创建视图
 </ActionButton>
 <Modal bind:this={modal}>
   <CreateViewModal />

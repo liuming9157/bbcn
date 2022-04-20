@@ -9,7 +9,7 @@
   async function generateAPIKey() {
     try {
       apiKey = await auth.generateAPIKey()
-      notifications.success("New API key generated")
+      notifications.success("新API key已生成")
     } catch (err) {
       notifications.error("Unable to generate new API key")
     }
@@ -27,15 +27,14 @@
 </script>
 
 <ModalContent
-  title="Developer information"
+  title="开发者信息"
   showConfirmButton={false}
   showSecondaryButton={true}
-  secondaryButtonText="Re-generate key"
+  secondaryButtonText="重新生成 key"
   secondaryAction={generateAPIKey}
 >
   <Body size="S">
-    You can find information about your developer account here, such as the API
-    key used to access the Budibase API.
+    你可以在这里看到你的开发者信息，例如API key.
   </Body>
   <CopyInput bind:value={apiKey} label="API key" />
 </ModalContent>

@@ -39,7 +39,7 @@
       quiet
       on:click={modal.show}
     >
-      Define existing relationship
+      定义关系
     </ActionButton>
   </div>
   <Modal bind:this={modal}>

@@ -9,7 +9,7 @@
   const updatePassword = async () => {
     try {
       await auth.updateSelf({ password })
-      notifications.success("Password changed successfully")
+      notifications.success("密码修改成功")
     } catch (error) {
       notifications.error("Failed to update password")
     }
@@ -17,11 +17,11 @@
 </script>
 
 <ModalContent
-  title="Update password"
-  confirmText="Update password"
+  title="修改密码"
+  confirmText="修改密码"
   onConfirm={updatePassword}
   disabled={error || !password}
 >
-  <Body size="S">Enter your new password below.</Body>
+  <Body size="S">输入你的密码.</Body>
   <PasswordRepeatInput bind:password bind:error />
 </ModalContent>

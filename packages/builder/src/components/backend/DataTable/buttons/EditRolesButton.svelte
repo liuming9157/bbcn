@@ -7,7 +7,7 @@
 
 <div>
   <Button icon="UsersLock" primary size="S" quiet on:click={modal.show}>
-    Edit roles
+    修改角色
   </Button>
 </div>
 <Modal bind:this={modal}>

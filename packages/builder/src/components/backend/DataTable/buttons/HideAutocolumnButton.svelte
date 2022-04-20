@@ -9,5 +9,5 @@
 </script>
 
 <ActionButton icon="MagicWand" primary size="S" quiet on:click={hideOrUnhide}>
-  {#if hideAutocolumns}Show auto columns{:else}Hide auto columns{/if}
+  {#if hideAutocolumns}显示自动列{:else}隐藏自动列{/if}
 </ActionButton>
