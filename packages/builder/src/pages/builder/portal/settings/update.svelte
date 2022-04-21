@@ -30,7 +30,7 @@
           Authorization: "Bearer budibase",
         },
       })
-      notifications.success("Your budibase installation is up to date.")
+      notifications.success("你的BBCN已是最新版.")
       getVersion()
     } catch (err) {
       notifications.error(`Error installing budibase update ${err}`)
@@ -54,7 +54,7 @@
 {#if $auth.isAdmin}
   <Layout noPadding>
     <Layout gap="XS" noPadding>
-      <Heading size="M">Updates</Heading>
+      <Heading size="M">更新</Heading>
       <Body>
         让BBCN保持最新版本可以获得更多功能.
       </Body>

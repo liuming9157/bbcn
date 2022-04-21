@@ -326,7 +326,7 @@
                 secondary
                 on:click={initiateAppImport}
               >
-                Import app
+                导入应用
               </Button>
             {/if}
           </div>

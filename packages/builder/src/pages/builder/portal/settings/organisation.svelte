@@ -75,9 +75,7 @@
     <Layout gap="XS" noPadding>
       <Heading size="M">Organisation</Heading>
       <Body>
-        Organisation settings is where you can edit your organisation name and
-        logo. You can also configure your platform URL and enable or disable
-        analytics.在组织设置里，你可以修改组织名称和logo.你可以配置平台URL并且启用/暂停分析。
+        在组织设置里，你可以修改组织名称和logo.你可以配置平台URL并且启用/暂停分析.
       </Body>
     </Layout>
     <Divider size="S" />

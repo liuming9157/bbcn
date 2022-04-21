@@ -38,7 +38,7 @@
           href: "/builder/portal/manage/users",
           heading: "管理",
         },
-        { title: "权限", href: "/builder/portal/manage/auth" },
+        { title: "认证", href: "/builder/portal/manage/auth" },
         { title: "邮件", href: "/builder/portal/manage/email" },
         {
           title: "组织",
