@@ -22,7 +22,7 @@
 <div class="root">
   <div class="nav">
     <Tabs {selected} on:select={selectFirstDatasource}>
-      <Tab title="Sources">
+      <Tab title="数据源">
         <DatasourceNavigator />
         <CreateDatasourceModal bind:modal />
       </Tab>
